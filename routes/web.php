@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('front.home');
-});`    1
+});
 
 //http://127.0.0.1:8000/login
 // Route::get('login', function () {
@@ -79,7 +79,7 @@ Route::get('/home', function () {
 // login & Sign_up
 Route::get('/Sign_up', [App\Http\Controllers\usersController::class, 'create']);
 Route::post('/Sign_up', [App\Http\Controllers\usersController::class, 'store']);
-Route::get('/admin/user', [App\Http\Controllers\AdminController::class, 'show']);
+Route::get('/admin/user', [AdminController::class, 'show'])->name('admin.user');
 Route::get('/login', [UsersController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [UsersController::class, 'login'])->name('login.post');
 Route::get('/logout', [usersController::class, 'logout'])->name('logout'); // Use GET for logout
