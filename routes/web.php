@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('front.home');
-});
+});`    1
 
 //http://127.0.0.1:8000/login
 // Route::get('login', function () {
