@@ -114,7 +114,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/courses/{id}', [CourseController::class, 'update'])->name('courses.update');
    
 });
-Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
+// Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
 
 //purchase
 Route::get('/video-content/{course_id}', [CourseController::class, 'videoContent'])
