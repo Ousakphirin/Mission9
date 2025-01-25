@@ -14,7 +14,7 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
 
         // Example: Return view with course details
-        return view('front.course_details', compact('course'));
+        return view('Front.course_details', compact('course'));
     }
 
     // Method to handle video content display
@@ -23,13 +23,13 @@ class CourseController extends Controller
         $course = Course::findOrFail($course_id);
 
         // Example: Return view with video content or related details
-        return view('front.video_content', compact('course'));
+        return view('Front.video_content', compact('course'));
     }
 
     // Method to display form for creating a new course
     public function create()
     {
-        return view('front.uploadPage');
+        return view('Front.uploadPage');
     }
 
     // Method to store a newly created course
@@ -70,7 +70,7 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::findOrFail($id);
-        return view('front.edit_course', compact('course'));
+        return view('Front.edit_course', compact('course'));
     }
 
     // Method to update an existing course
@@ -124,7 +124,7 @@ class CourseController extends Controller
     {
         $courses = Course::all();
 
-        return view('front.courses', compact('courses'));
+        return view('Front.courses', compact('courses'));
     }
 
     // Method to handle purchasing a course
@@ -185,7 +185,7 @@ class CourseController extends Controller
             $query->where('user_id', auth()->user()->id);
         })->get();
 
-        return view('front.purchased-course', compact('courses'));
+        return view('Front.purchased-course', compact('courses'));
     }
 
     // Method to purchase a course
