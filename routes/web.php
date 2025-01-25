@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('front.home');
+    return view('Front.home');
 });
 
 //http://127.0.0.1:8000/login
@@ -48,32 +48,32 @@ Route::get('/dashboard', function () {
 
 //http://127.0.0.1:8000/about-us
 Route::get('/about-us' , function() {
-    return view('front.about-us');
+    return view('Front.about-us');
 });
 
 //http://127.0.0.1:8000/contact-us
 Route::get('/contact', function () {
-    return view('front.contact-us');
+    return view('Front.contact-us');
 });
 
 //http://127.0.0.1:8000/courses
 Route::get('/courses', function () {
-     return view('front.courses');
+     return view('Front.courses');
  });
 
 //http://127.0.0.1:8000/Sign_up
 // Route::get('/Sign_up', function () {
-//     return view('front.Sign_up');
+//     return view('Front.Sign_up');
 // });
 
 //http://127.0.0.1:8000/Sign_in
 // Route::get('/Sign_in', function () {
-//     return view('front.Sign_in');
+//     return view('Front.Sign_in');
 // });
 
 //http://127.0.0.1:8000/home
 Route::get('/home', function () {
-    return view('front.home');
+    return view('Front.home');
 });
 
 // login & Sign_up
