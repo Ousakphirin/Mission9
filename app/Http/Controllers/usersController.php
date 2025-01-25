@@ -16,7 +16,7 @@ class UsersController extends Controller
     // Show sign-up form
     public function create()
     {
-        return view('front.Sign_up');
+        return view('Front.Sign_up');
     }
 
     // Store new user in database
@@ -44,7 +44,7 @@ class UsersController extends Controller
     // Show login form
     public function showLoginForm()
     {
-        return view('front.Sign_in');
+        return view('Front.Sign_in');
     }
 
     // Handle login
@@ -80,7 +80,7 @@ class UsersController extends Controller
             $user = Auth::user();
             // Fetch courses associated with the authenticated user
             $courses = $user->courses; // This assumes the relationship is defined correctly in User model
-            return view('front.profile', compact('user', 'courses'));
+            return view('Front.profile', compact('user', 'courses'));
         } else {
             return redirect('/login')->with('error', 'Please log in to view your profile.');
         }
@@ -119,7 +119,7 @@ class UsersController extends Controller
     // Show contact form
     public function showContactForm()
     {
-        return view('front.contact-us');
+        return view('Front.contact-us');
     }
 
     // Handle contact form submission
